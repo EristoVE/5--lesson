@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 1
+        </title>
+    </head>
+         <body>
+             <script>    
+                "use strict";
+
+                // Написать программу, которая по номеру месяца выводит его название в консоль.
+                // Номер месяца вводит пользователь (от 1 до 12). Сразу после ввода исходных
+                // данных осуществить проверку корректности ввода и, в случае ввода некорректных
+                // данных, вывести сообщение об ошибке в консоль.
+                
+                let a = prompt('Введите интересующеечисло месяца', '1');
+                let error;
+
+                if (!error) {
+                    
+                    if (a == null) {
+                        console.log('Вы отменили действие');
+                    }
+
+                    a = Number(a);
+
+                    if (a < 0) {
+                        console.log('Вы ввели число меньше одного');
+                    } else if (!Number.isInteger(a)) {
+                        console.log('вы ввели не целое число либо не число');
+                    } else if (a > 12) {
+                        console.log('Ошибка, вы ввели число превышающее номер месяца');
+                    } else if (a == 0) {
+                        console.log('Ошибка, вы ввели число 0 или пробел');
+                    }
+                };
+        
+                if (a == '1') {
+                    console.log('Январь');
+                } else if (a == '2') {
+                    console.log('Февраль');
+                } else if (a == '3') {
+                    console.log('Март');
+                } else if (a == '4') {
+                    console.log('Апрель');
+                } else if (a == '5') {
+                    console.log('Май');
+                } else if (a == '6') {
+                    console.log('Июнь');
+                } else if (a == '7') {
+                    console.log('Июль');
+                } else if (a == '8') {
+                    console.log('Август');
+                } else if (a == '9') {
+                    console.log('Сентябрь');
+                } else if (a == '10') {
+                    console.log('Октябрь');
+                } else if (a == '11') {
+                    console.log('Ноябрь');
+                } else if (a == '12') {
+                    console.log('Декабрь');
+                }; 
+                   
+             </script>
+          </body>
+</html>

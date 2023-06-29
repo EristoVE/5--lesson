@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 1
+        </title>
+    </head>
+        <body>
+            <script>
+                "use strict";
+
+                // Написать программу, которая определяет текущее время суток (ночь, утро, день,
+                // вечер) и день недели. Ночью будем считать время, попадающее в интервал [0:00;
+                // 6:00) часов, утром – [6:00; 12:00), днем – [12:00; 18:00) и вечером – [18:00; 0:00).
+                // Вывести в консоль время суток и день недели в следующем виде: 'Сейчас утро
+                // понедельника' и т. п.
+              
+                let myDate = new Date();
+                let time = myDate.getHours();
+                let tiem1 = myDate.getDay()
+
+                if ((time >= 6) && (time < 12)) {
+                    console.log('Сейчас утро', myDate.toLocaleString('ru-us', { weekday: 'long' }));
+                } else if ((time >= 12) && (time < 18)) {
+                    console.log('Сейчас день', myDate.toLocaleString('ru-us', { weekday: 'long' }));
+                } else if ((time >= 18) && (time < 0)) {
+                    console.log('Сейчас вечер', myDate.toLocaleString('ru-us', { weekday: 'long' }));
+                } else if ((time >= 0) && (time < 6)) {
+                    console.log('Сейчас ночь', myDate.toLocaleString('ru-us', { weekday: 'long' }));
+                }
+                
+            </script>
+        </body>
+</html>

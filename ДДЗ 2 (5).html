@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 2
+        </title>
+    </head>
+        <body>
+            <script>
+                "use strict";
+
+                // Написать программу, которая определяет, является ли введенный пользователем
+                // год високосным. Осуществить проверку корректности ввода пользователем
+                // исходных данных.
+              
+                let year = prompt('Введите интересующий вас год', '2000');
+                let leapyear;
+ 
+                if ( year != Number(year) ) { 
+                    console.log('Вы ввели год не корректно');
+                } else if (year == 0) {
+                    console.log('Введите корректно операцию'); 
+                } else if (year < '1') {
+                    console.log('Вы ввели год не корректно');
+                } else if (year > '3000') {
+                    console.log('Вы ввели свыше 3000 года, расчет не будет произведен');
+                } else if (year % 400 == 0) {
+                    leapyear = true;
+                    console.log(year + '  год - ' + (leapyear ? '' : 'не') + 'високосный');
+                } else if (year % 100 == 0) {
+                    leapyear = false;
+                    console.log(year + '  год - ' + (leapyear ? '' : 'не') + 'високосный');
+                } else if (year % 4 == 0) {
+                    leapyear = true;
+                    console.log(year + '  год - ' + (leapyear ? '' : 'не') + 'високосный');
+                } else {                    
+                    leapyear = false;
+                    console.log(year + '  год - ' + (leapyear ? '' : 'не') + 'високосный');
+                } 
+                 
+            </script>
+        </body>
+</html>

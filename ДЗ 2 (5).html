@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 2
+        </title>
+    </head>
+         <body>
+             <script>    
+                "use strict";
+
+                // Пользователь вводит число, операцию (сложение (+), вычитание (-), умножение (*)
+                // или деление (/)) и второе число. Вывести результат введенного действия над
+                // числами в консоль. Осуществить проверку корректности ввода данных.
+                
+                let a = Number(prompt('Введите число', '5'));
+                let operation = (prompt('Введите операцию', '+'));
+                let b = Number(prompt('Введите число', '5'));
+               
+                if ( a != Number(a) || b != Number(b) ) { 
+                    console.log('Ввод числа осуществлен не верно, повторите ввод');
+                } else if (a == '') {
+                    console.log('Введите корректно число');
+                } else if (b == '') {
+                    console.log('Введите корректно число');
+                } else if (operation == '') {
+                    console.log('Введите корректно операцию');
+                } else if (operation == '+') {
+                    let d = a + b;
+                    console.log(d);
+                } else if (operation == '-') {
+                    let d = a - b;
+                    console.log(d);
+                } else if (operation == '*') {
+                    let d = a * b;
+                    console.log(d);
+                } else if (operation == '/') {
+                    let d = a / b;
+                    console.log(d);
+                } else (console.log('Введите корректно операцию'));
+                
+             </script>
+          </body>
+</html>
